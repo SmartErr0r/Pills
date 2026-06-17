@@ -3,9 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pills</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
+<header class="header">
+
+    <div class="container">
+
+        <button class="login-btn">
+            Вход
+        </button>
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                💊
+            </div>
+
+            <div>
+                <h1>Pills</h1>
+                <p>Каталог лекарственных препаратов</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<nav class="tabs">
+
+    <button class="tab active">
+        Все препараты
+    </button>
+
+    <button class="tab">
+        Избранное
+    </button>
+
+</nav>
+
+<section class="toolbar">
+
+    <div class="container">
+
+        <div class="search">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                    type="text"
+                    placeholder="Поиск по названию, показаниям, категории..."
+            >
+
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active">Все формы</button>
+            <button class="filter">💊 Таблетки</button>
+            <button class="filter">💊 Капсулы</button>
+            <button class="filter">💉 Инъекции</button>
+            <button class="filter">💧 Капли</button>
+            <button class="filter">💨 Спрей</button>
+            <button class="filter">🩹 Пластыри</button>
+            <button class="filter">⭕ Порошок</button>
+            <button class="filter">🧴 Гель</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<main class="content">
+
+    <div class="container">
+
+        <div class="top-info">
+
+            <h3>Всего препаратов :</h3>
+
+        </div>
+
+        <div class="medicines-grid">
+
+            <div class="empty-state">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <h2>Препараты пока не добавлены</h2>
+
+                <p>
+                    Здесь будут отображаться карточки лекарств
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <button id="closeModal" class="close-btn">
+            ✕
+        </button>
+
+        <h2>Карточка препарата</h2>
+
+        <p>
+            Здесь будет подробная информация о лекарстве.
+        </p>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
 
 </body>
 </html>

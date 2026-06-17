@@ -1,0 +1,228 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eef3f8;
+    color:#1f2937;
+}
+
+.container{
+    width:1200px;
+    max-width:95%;
+    margin:auto;
+}
+
+.header{
+    background:#0f7996;
+    color:white;
+    padding:20px 0;
+}
+
+.header .container{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.login-btn{
+    border:none;
+    background:white;
+    color:#0f7996;
+    padding:12px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s;
+}
+
+.login-btn:hover{
+    transform:translateY(-2px);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo-icon{
+    width:50px;
+    height:50px;
+    border-radius:14px;
+    background:rgba(255,255,255,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:22px;
+}
+
+.tabs{
+    background:white;
+
+    display:flex;
+    justify-content:center;
+
+    border-bottom:1px solid #ddd;
+}
+
+.tab{
+    border:none;
+    background:none;
+
+    padding:18px 25px;
+
+    cursor:pointer;
+
+    font-size:15px;
+}
+
+.tab.active{
+    border-bottom:3px solid #0f7996;
+    color:#0f7996;
+}
+
+.toolbar{
+    background:white;
+    padding:20px 0;
+}
+
+.search{
+    position:relative;
+}
+
+.search i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.search input{
+    width:100%;
+    height:50px;
+
+    border:1px solid #ddd;
+    border-radius:14px;
+
+    padding-left:45px;
+}
+
+.filters{
+    margin-top:15px;
+
+    display:flex;
+    gap:10px;
+
+    flex-wrap:wrap;
+}
+
+.filter{
+    border:none;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:#e8f5fb;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.filter.active{
+    background:#0f7996;
+    color:white;
+}
+
+.content{
+    padding:30px 0;
+}
+
+.medicines-grid{
+
+    background:white;
+
+    border-radius:20px;
+
+    min-height:500px;
+
+    margin-top:20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.empty-state{
+    text-align:center;
+    color:#94a3b8;
+}
+
+.empty-state i{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.modal{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+
+    width:500px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    position:relative;
+}
+
+.close-btn{
+    position:absolute;
+    top:10px;
+    right:10px;
+
+    width:40px;
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .filters{
+        overflow:auto;
+        flex-wrap:nowrap;
+    }
+
+    .medicines-grid{
+        min-height:350px;
+    }
+
+}
