@@ -1,106 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Pills</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
+
 <body>
 
-<header class="header">
+    <!-- HEADER -->
 
-    <div class="container">
+    <header class="header">
 
-        <button class="login-btn">
-            Вход
-        </button>
+        <div class="container header-content">
 
-        <div class="logo">
+            <div class="logo-wrapper">
 
-            <div class="logo-icon">
-                💊
+                <div class="logo-icon">
+                    💊
+                </div>
+
+                <div>
+
+                    <h1 class="logo-title">
+                        Pills
+                    </h1>
+
+                    <p class="logo-subtitle">
+                        Каталог лекарственных препаратов
+                    </p>
+
+                </div>
+
             </div>
 
-            <div>
-                <h1>Pills</h1>
-                <p>Каталог лекарственных препаратов</p>
-            </div>
+            <button class="login-btn">
+                Вход
+            </button>
 
         </div>
 
-    </div>
+    </header>
 
-</header>
+    <!-- навигация -->
 
-<nav class="tabs">
+    <nav class="nav">
 
-    <button class="tab active">
-        Все препараты
-    </button>
+        <div class="container nav-content">
 
-    <button class="tab">
-        Избранное
-    </button>
+            <button
+                id="allTab"
+                class="nav-tab active"
+            >
+                Все препараты
+            </button>
 
-</nav>
+            <button
+                id="favoriteTab"
+                class="nav-tab"
+            >
+                Избранное
+            </button>
 
-<section class="toolbar">
+        </div>
 
-    <div class="container">
+    </nav>
 
-        <div class="search">
+    <!-- поиск и фильтры -->
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+    <section class="search-section">
+
+        <div class="container">
 
             <input
-                    type="text"
-                    placeholder="Поиск по названию, показаниям, категории..."
+                type="text"
+                id="searchInput"
+                class="search-input"
+                placeholder="Поиск по названию или показаниям..."
             >
 
+            <div class="filters">
+
+                <button
+                    class="filter-btn active"
+                    data-form=""
+                >
+                    Все формы
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Таблетки"
+                >
+                    Таблетки
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Капсулы"
+                >
+                    Капсулы
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Инъекции"
+                >
+                    Инъекции
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Капли"
+                >
+                    Капли
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Спрей"
+                >
+                    Спрей
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-form="Гель"
+                >
+                    Гель
+                </button>
+
+            </div>
+
         </div>
 
-        <div class="filters">
+    </section>
 
-            <button class="filter active">Все формы</button>
-            <button class="filter">💊 Таблетки</button>
-            <button class="filter">💊 Капсулы</button>
-            <button class="filter">💉 Инъекции</button>
-            <button class="filter">💧 Капли</button>
-            <button class="filter">💨 Спрей</button>
-            <button class="filter">🩹 Пластыри</button>
-            <button class="filter">⭕ Порошок</button>
-            <button class="filter">🧴 Гель</button>
+    <!-- основной контент -->
 
-        </div>
+    <main class="main-content">
 
-    </div>
+        <div class="container">
 
-</section>
+            <h2
+                id="medicineCount"
+                class="medicine-counter"
+            >
+                Всего препаратов: 0
+            </h2>
 
-<main class="content">
+            <div
+                id="medicinesGrid"
+                class="medicines-grid"
+            >
 
-    <div class="container">
+                <!-- Карточки создаются через JS -->
 
-        <div class="top-info">
-
-            <h3>Всего препаратов :</h3>
+            </div>
 
         </div>
 
-        <div class="medicines-grid">
+    </main>
 
-            <div class="empty-state">
+    <!-- MODAL -->
 
-                <i class="fa-solid fa-pills"></i>
+    <div
+        id="medicineModal"
+        class="modal"
+    >
 
-                <h2>Препараты пока не добавлены</h2>
+        <div class="modal-overlay"></div>
 
-                <p>
-                    Здесь будут отображаться карточки лекарств
-                </p>
+        <div class="modal-content">
+
+            <button
+                id="closeModal"
+                class="close-btn"
+            >
+                ✕
+            </button>
+
+            <div id="modalBody">
+
+                <!-- Контент препарата -->
 
             </div>
 
@@ -108,27 +202,7 @@
 
     </div>
 
-</main>
-
-<div id="modal" class="modal">
-
-    <div class="modal-content">
-
-        <button id="closeModal" class="close-btn">
-            ✕
-        </button>
-
-        <h2>Карточка препарата</h2>
-
-        <p>
-            Здесь будет подробная информация о лекарстве.
-        </p>
-
-    </div>
-
-</div>
-
-<script src="app.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
